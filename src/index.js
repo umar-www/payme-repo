@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var apple_repository_1 = require("./entities/apple-repository");
+var counter_repository_1 = require("./entities/counter-repository");
+var apple_1 = require("./models/apple");
+var counter_1 = require("./models/counter");
+var apple1 = new counter_repository_1.CounterRepository();
+var apple2 = new apple_repository_1.AppleRepository();
+apple1.counters(new counter_1.Counter("ASIA", 1200));
+apple2.importApple(new apple_1.Apple("RED", 20));
+apple2.importApple(new apple_1.Apple('GREEN', 27));
+console.log(apple1.getList());
+console.log(apple2.getList());
